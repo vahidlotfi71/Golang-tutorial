@@ -1,29 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
-	var salery float64
-	var minSalery float64 = 7000000
-	var taxPercentage float64 = 0
+	var notificationTypes string
 
-	fmt.Print("Enter Your salery: ")
-	fmt.Scan(&salery)
+	print("Enter notification type : ")
 
-	switch {
-		case salery < minSalery:
-			taxPercentage = 0 
-		case salery > minSalery &&  salery < minSalery *2 :
-			taxPercentage = .5
-		case salery > minSalery * 3 && salery < salery * 4 :
-			taxPercentage = .10
-		case salery > minSalery * 4 && salery < salery * 6 :
-			taxPercentage = .30
-		default :
-			taxPercentage = .40
-		}
-	fmt.Printf("your salery is %f\n" ,salery)		
-	fmt.Printf("your tax percentage is %f\n" , taxPercentage)
-	fmt.Printf("your salery after tax is %f\n" ,salery -(salery * taxPercentage) )
+	fmt.Scan(&notificationTypes)
 
+	switch{
+	case strings.Contains(notificationTypes , "sms"):
+		println("sms sent")
+	case strings.Contains(notificationTypes , "email"):
+		println("email sent")
+	case strings.Contains(notificationTypes , "push"):
+		print("push sent")
+	default:
+		print("invalid entered")
+	}
 }
