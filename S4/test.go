@@ -1,14 +1,12 @@
 package main
 
+import "fmt"
+
 func main() {
-	var i int = 12
-	
-	s := "Hello world!"
+	name := "vahid"
+	age := 32
+	score := 5.2
 
-	var i1 = 111
-	
-	println(i)
-	println(i1)
-	println(s)
-
+	println(name, age, score)
+	fmt.Printf("name %s age %d score %f Type : %T", name, age, score , name)
 }

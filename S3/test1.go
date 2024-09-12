@@ -1,19 +1,20 @@
-package main 
+package main
+
+import "fmt"
 
 func main() {
-	i , j := 11,22
+	char1 := 'a'
+	char2 := 'b'
+	char3 := 12.11
 
-	var IP *int = &i
-	var jp *int = &j  // مقدار دهی داینامیک 
-	i3 := i	     	// مقدار دهی استاتیک 
-	
-	println(i)
-	println(IP)
-	println(*IP) // برای جاپ مقداز متغییر از ستاره استفاده می شود
-	println(j)
-	println(jp)
-	println(*jp)	
-	println(&i) // ادرس خانه متغییر ای
-	println("================================================================")
-	println(i3)
+	mystr :="Hello world 😍😍"
+
+
+	fmt.Printf("char1: %d %T\n" , char1, char1)
+	fmt.Printf("char2: %d %T\n" , char2 , char2)
+	fmt.Printf("char3: %f %T\n" , char3 , char3)
+	fmt.Printf("mystr: %s %T , len : %d \n" , mystr, mystr , len(mystr))
+
+	for i:=0 ; i< len(mystr) ; i++ {
+		println(mystr[i])}	
 }
