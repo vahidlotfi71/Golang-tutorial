@@ -24,8 +24,8 @@ func main() {
 	i6 , f4 , s6 = 33 , 23.66 , "rahim"
 
 	var (
-		i7 = 88,
-		f5 = 11.11111 ,
+		i7 = 88
+		f5 = 11.11111 
 		s7 = "gender"
 	)
 
@@ -36,7 +36,7 @@ func main() {
 
 	println(s2)
 	println(i2)
-	
+
 	println(i3)
 	println(s3)
 	println(f1)

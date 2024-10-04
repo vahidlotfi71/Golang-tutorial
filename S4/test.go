@@ -1,12 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+
 
 func main() {
-	name := "vahid"
-	age := 32
-	score := 5.2
 
-	println(name, age, score)
-	fmt.Printf("name %s age %d score %f Type : %T", name, age, score , name)
+	fmt.Println(strings.Trim("     a      vahid     lotfi     hhh!!" , "!"))
 }
