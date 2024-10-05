@@ -1,20 +1,22 @@
-package main 
+package main
+
+import "fmt"
 
 func main() {
-// 	i := 2
-// 	for i < 10 {
-// 		println(i)
-// 		i = i+1
-// 	}
-// 	println("====``")
-// 	for j := 3 ; j <= 10 ; j++ {
-// 		println(j)}
+	names := [4]string{"a", "b", "c", "d"}
 
-for i := range 10 {
-	if i%2 != 0{
-		continue
+	searchKeyword := "d"
+
+	for index, value := range names {
+		if searchKeyword == value {
+			fmt.Printf("name found and index is : %v\n", index)
+		}
 	}
-	println(i)
-}
 
+	searchKeyword2 := "a"
+
+	for index , value := range names {
+		if searchKeyword2 == value {
+			fmt.Printf("name found and index is : %v", index)
+		}}
 }

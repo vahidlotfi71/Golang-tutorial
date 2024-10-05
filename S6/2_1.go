@@ -1,40 +1,33 @@
 package main
 
-import "math/rand"
-
-type CreditCard struct {
-	CardNumber string
-	ExpireDate string
-	Cvv2       string
-	BankName   string
-}
-
 func main() {
+	 
+	// چاپ اعداد زوج 
 
-	cards := []CreditCard{
-		{CardNumber: "6037991725253535", ExpireDate: "01/01", Cvv2: "123", BankName: "Melli"},
-		{CardNumber: "5892101245457878", ExpireDate: "03/03", Cvv2: "245", BankName: "Sepah"},
-		{CardNumber: "6104981247653214", ExpireDate: "02/04", Cvv2: "741", BankName: "Mellat"},
-		{CardNumber: "6219861047653214", ExpireDate: "01/02", Cvv2: "1023", BankName: "Saman"},
+	for i:= 0 ; i<= 100 ; i++ {
+		if i%2 == 0{
+			println(i)
+		}
 	}
 
-	for _, card := range cards {
+	println("====================================")
 
-		if card.ExpireDate < "01/03" {
-			println("Your card", card.CardNumber, " is expired")
+	// روش دیگر چاپ اعداد زوج
+
+	for i:= 0 ; i<= 100 ; i++{  
+		if i%2 != 0{ // اگه زوج نبود برو اول فر
 			continue
 		}
-		var remainAmount = getBankAccountRemainAmount(card.CardNumber, card.ExpireDate)
-		println("Your card", card.CardNumber, " is valid, remain amount is ", remainAmount)
+		println(i)
 	}
 
-}
+println("====================================")
 
-func getBankAccountRemainAmount(cardNumber string, expireDate string) int {
-	min := 1000000
-	max := 30000000
-	if expireDate < "01/03" {
-		return 0
+	for i := 0 ; i <= 100 ; i++ { // تا 50 چاپ می کند
+		if i == 50 {
+			break
+		}
+		println(i)
 	}
-	return (rand.Intn(max-min) + min)
+
 }

@@ -6,20 +6,22 @@ import (
 )
 
 func main() {
-	var notificationTypes string
 
-	print("Enter notification type : ")
+	var notificationType string
 
-	fmt.Scan(&notificationTypes)
+	fmt.Print("Enter notification type( SMS or email or push ):")
+	fmt.Scan(&notificationType)
 
-	switch{
-	case strings.Contains(notificationTypes , "sms"):
-		println("sms sent")
-	case strings.Contains(notificationTypes , "email"):
-		println("email sent")
-	case strings.Contains(notificationTypes , "push"):
-		print("push sent")
+	switch {
+	case strings.Contains(notificationType,"SMS"):
+		print("SMS notification sended successfully")
+	case strings.Contains(notificationType,"email"):
+		print("email notification sended successfully")
+	case strings.Contains(notificationType,"push"):
+		print("push notification sended successfully")
 	default:
-		print("invalid entered")
+		print("unknown notification type")
+
 	}
+
 }
