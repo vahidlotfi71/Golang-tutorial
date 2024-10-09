@@ -2,21 +2,24 @@ package main
 
 import "fmt"
 
+type Person struct {
+	Name   string
+	fmaily string
+	age    int
+}
+
 func main() {
-	names := [4]string{"a", "b", "c", "d"}
 
-	searchKeyword := "d"
+	person :=make(map[string]Person)
 
-	for index, value := range names {
-		if searchKeyword == value {
-			fmt.Printf("name found and index is : %v\n", index)
-		}
-	}
+	person["121223231"] = Person{Name: "alice", age: 20, fmaily: "lotfield"}
+	person["23456"] = Person{Name: "vahid", age: 20, fmaily: "lotfi"}
 
-	searchKeyword2 := "a"
 
-	for index , value := range names {
-		if searchKeyword2 == value {
-			fmt.Printf("name found and index is : %v", index)
-		}}
+	fmt.Println(person)
+
+	va := person["23456"]
+
+	fmt.Print(va)
+
 }

@@ -6,7 +6,7 @@ func main () {
 	numbers := [4]int{1, 2, 3, 4}
 	numbers2 := numbers
 
-	fmt.Println(numbers)    // برای چاپ ارایه از پکیج اف ائ تی استفاده شود
+	fmt.Println(numbers)    // برای چاپ ارایه از پکیج اف ام تی استفاده شود
 	fmt.Println(numbers2)
 
 	println(&numbers) // & برا ی چاپ ادرس خوانهایی که برای این ها رزرو شده استفاده می شود 

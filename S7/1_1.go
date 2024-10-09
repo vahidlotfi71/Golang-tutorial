@@ -23,7 +23,7 @@ func main() {
 		if names[j] == searchKey2 {
 			println("Name found. index: ",j)
 			
-		}
+		}	
 	}
 	
 }
