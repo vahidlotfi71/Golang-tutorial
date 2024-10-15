@@ -60,3 +60,4 @@ func main() {
 	println(strings.TrimRight("Vahid   lotfi!!" , "!"))
 	println(strings.TrimLeft("!!Vahid   lotfi" , "!"))
 }
+

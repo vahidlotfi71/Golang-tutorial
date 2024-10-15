@@ -4,15 +4,9 @@ import "fmt"
 
 func main() {
 
-	a := "vahid"
-	b := "hasan"
-	c := 123
+	i, j := 12, 14
+	var IP *int = &i
+	var JP *int = &j
 
-	mystr := "hi vahid wellcome to learn GO language"
-
-	fmt.Printf("a: %v ,Type: %T \n", a, a)
-	fmt.Printf("b: %v ,Type: %T\n", b, b)
-	fmt.Printf("c: %v ,Type: %T\n", c, c)
-	println()
-	fmt.Printf("mystr: %v , Type: %T , len: %d \n", mystr, mystr,len(mystr))
+	fmt.Println("IP: ", *IP, " JP: ", *JP)
 }

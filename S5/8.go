@@ -22,6 +22,5 @@ func main() {
 		println("push sent")
 	default:
 		println("Unknown")
-
 	}
 }
