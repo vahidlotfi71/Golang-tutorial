@@ -10,9 +10,10 @@ func PrintLog(loges ...interface{}) {
 
 	for index, item := range loges {
 		println("index ", index, ":", item) // خروجی این قابل فهم نیست
-	}
+	} 
 
 	println("################################################################")
+
 	for index, item := range loges {
 		fmt.Printf("index: %d, item: %v\n", index, item)
 	}

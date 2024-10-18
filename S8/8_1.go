@@ -57,7 +57,7 @@ func GetRoomFromInput() Room {
 }
 
 func AddRoom() {
-	room := GetRoomFromInput()
+	room := GetRoomFromInput()	
 	Rooms = append(Rooms, room)
 }
 
@@ -101,7 +101,7 @@ func GetRoom(id int) *Room {
 
 func CalculateRoomPrice(room Room, nights int, personCount int) (roomPrice float64, tax float64, discountAmount float64, finalPrice float64) {
 
-	discountPercentage := 0.0
+	discountPercentage := 0.0	
 	if (nights >= 7 && nights <= 15) {
 		discountPercentage = 0.1
 	}else if (nights >= 15 && nights <= 30) {
