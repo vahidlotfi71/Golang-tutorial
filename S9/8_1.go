@@ -36,7 +36,7 @@ type Mobile struct {
 }
 
 type Laptop struct {
-	ElectronicProduct ElectronicProduct // embedded  struct   حالا به پروپرتی های الکترومیک پروداکت دسترسی داریم برای دسترسی ه ویژگی های الکترونیک پروداکت باید به صورت سلسله مراتبی بریم جلو چون بهش فغحث دادیم
+	ElectronicProduct ElectronicProduct // em bedded  struct   حالا به پروپرتی های الکترومیک پروداکت دسترسی داریم برای دسترسی ه ویژگی های الکترونیک پروداکت باید به صورت سلسله مراتبی بریم جلو چون بهش فغحث دادیم
 	UsbPortCount      int
 	KeyboardType      string
 	HasCdRom          bool // have CDROM or not
