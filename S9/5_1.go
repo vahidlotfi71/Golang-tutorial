@@ -5,7 +5,7 @@ package main
 
 import "fmt"
 
-// salery base is duler $
+// salery base is dollar $
 const (
 	BaseSalery = 1000
 	ExtraPerHourRate = 10
