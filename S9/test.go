@@ -2,31 +2,39 @@ package main
 
 import "fmt"
 
-type Person struct {
-	name   string
-	family string
-	age    uint
+type Employee struct {
+	FullName      string
+	Age         int
+	SalaryOfMonth int
 }
 
 func main() {
 
-	person_1 := Person{"vahid", "lotfi", 32}
-	person_2 := &Person{name: "vahid", family: "lotfi", age: 32}
-	person_3 := NewPerson("vahid", "lotfi",32)
-
-	person_4 := new(Person)
-	person_4.name = "vahid"
-	person_4.family = "vahid"
-	person_4.age  = 32
+	employee1 := Employee{"Ali Ahmadi", 32, 2000}
+	employee2 := new(Employee)
+	employee2.FullName = "Vahid lotfi"
+	employee2.Age  =18
+	employee2.SalaryOfMonth = 3000
 
 
-	fmt.Println(person_1)
-	fmt.Println(person_2)
-	fmt.Println(person_3)
-	fmt.Println(person_4)
+
+	fmt.Println(employee1)
+	fmt.Println(CalcYearlyIncom(employee1))
+	fmt.Println(employee1.calcYearIncomMethod())
+	fmt.Println(employee1.CalcAgeToDay())
+
+
 }
 
 
-func NewPerson(name string, family string, age uint) *Person {
+func CalcYearlyIncom(employee Employee) int{
+	return employee.SalaryOfMonth*12
+}
 
-	return &Person{name: name, family: family, age: age}}
+func (employee Employee) calcYearIncomMethod() int {
+	return employee.SalaryOfMonth*12 
+}
+
+func (employee Employee) CalcAgeToDay() int {
+	return employee.Age*365 
+}
