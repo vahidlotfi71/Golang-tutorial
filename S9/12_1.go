@@ -3,15 +3,15 @@ package main
 import "fmt"
 
 
-type Apirespons struct {
-	ResultCode       int
-	ResultMessage    string
-	TransitionAmount float64
-	TransitionTime   string
+type Apirespons struct {  // struct == ساخت 
+		ResultCode       int
+		ResultMessage    string
+		TransitionAmount float64
+		TransitionTime   string
 }
 
 
-func main() {
+func main() {	
 	// Api call and get response
 
 

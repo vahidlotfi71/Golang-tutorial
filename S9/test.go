@@ -1,26 +1,36 @@
 package main
 
-import (
-	"encoding/json"
-	"fmt"
-)
+import "fmt"
 
-type Person struct {
-	Name      string  `json:"first_name"`
-	Age       int	   
-	Family    string  `json:"last_name"`
-	Gender    string
-	Height    int
-	Weight    int
-	HairColor string
+type Apirespons struct {
+	ResultCode       int
+	ResultMessage    string
+	TransitionAmount float64
+	TransitionTime   string
 }
 
 func main() {
-	person1 := Person{Name: "John", Age: 32, Family: "lotfi", Gender: "male", Height: 173, Weight: 70, HairColor: "Black"}
 
-	fmt.Println(person1)
+	apirespons := struct {
+		ResultCode       int
+		ResultMessage    string
+		TransitionAmount float64
+		TransitionTime   string
+	}{
+		ResultCode:       12,
+		ResultMessage:    "Hello world!",
+		TransitionAmount: 12.12,
+		TransitionTime:   "12:12:12",
+	}
 
-	personJson , _ := json.MarshalIndent(person1, "", " ")
+	apirespons1 := Apirespons{
+		ResultCode:       23,
+		ResultMessage:    "Hi vahid",
+		TransitionAmount: 34,
+		TransitionTime:   "23:12:00",
+	}
 
-	fmt.Println(string(personJson))
+	fmt.Println(apirespons)
+	fmt.Println(apirespons1)
+
 }
