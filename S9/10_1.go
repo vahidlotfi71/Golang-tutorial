@@ -37,7 +37,7 @@ func (builder *PersonBuilder) SetName(name string) *PersonBuilder {  // چون �
 }
 
 func (builder *PersonBuilder) SetFamily(family string) *PersonBuilder {
-	builder.Family = family
+	builder.Family = family	
 	return builder
 }
 

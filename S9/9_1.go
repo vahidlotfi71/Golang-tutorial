@@ -48,7 +48,7 @@ func main() {
  
 }
 
-type EmployeeSalaryCalculator interface {
+type EmployeeSalaryCalculator interface {   // interface = رابط
 	SalaryCalculate() (salary float64, tax float64)
 }
 
