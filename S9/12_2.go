@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-// anonymous filled
+// ananymous = ناشناس
+// anonymous filled 
 type Person struct { // تایپ دیتاهایی که قراره به پرسن بدهیم را می نویسیم
 	int
 	string

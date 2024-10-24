@@ -2,35 +2,26 @@ package main
 
 import "fmt"
 
-type Apirespons struct {
-	ResultCode       int
-	ResultMessage    string
-	TransitionAmount float64
-	TransitionTime   string
+type Person1 struct {
+	int
+	string
+	float64
 }
 
 func main() {
 
-	apirespons := struct {
-		ResultCode       int
-		ResultMessage    string
-		TransitionAmount float64
-		TransitionTime   string
+	person1 := struct {
+		NationaCode int
+		Name        string
+		Age         int
 	}{
-		ResultCode:       12,
-		ResultMessage:    "Hello world!",
-		TransitionAmount: 12.12,
-		TransitionTime:   "12:12:12",
+		NationaCode: 2960220481,
+		Name:        "vahid",
+		Age:         32,
 	}
 
-	apirespons1 := Apirespons{
-		ResultCode:       23,
-		ResultMessage:    "Hi vahid",
-		TransitionAmount: 34,
-		TransitionTime:   "23:12:00",
-	}
+	person2 := Person1{121212121, "vahid", 20.11}
 
-	fmt.Println(apirespons)
-	fmt.Println(apirespons1)
-
+	fmt.Println(person1)
+	fmt.Println(person2)
 }
