@@ -2,78 +2,34 @@ package main
 
 import "fmt"
 
-type Animal interface {
-	Eat()
-	Sleep()
-	Walk()
-}
-
-type Human interface {
-	Animal
-	Speak()
-	Think()
-}
-
-type Employee struct {
-	Human
-	Name string
-	Age  int
-}
-
-type Cat struct {
-	Animal
+type Person struct {
 	Name string
 }
 
 func main() {
+	Print("Hello")
+	Print(123)
+	Print(true)
+	Print([]int{1, 2, 3})
+	Print(map[string]int{"a": 1, "b": 2})
+	Print(Person{"Ali"})
 
-	employee  := &Employee{Name :"John", Age:32}
-	cat := &Cat{Name : "sjdhf"}
-
-	var human Human = employee
-	var animal Animal =  cat
-
-	human.Eat()
-	human.Sleep()
-	human.Walk()
-	human.Speak()
-	human.Think()
-
-	animal.Eat()
-	animal.Sleep()
-	animal.Walk()
 }
 
+func Print(input interface{}) {
+	switch input.(type) {
+	case string :
+		fmt.Println("String:", input)
+	case int:
+		fmt.Println("Int:", input)
+	case bool:
+		fmt.Println("Bool:", input)
+	case []int:
+		fmt.Println("Array:", input)
+	case map[string]int:
+		fmt.Println("Map:", input)
+	case Person:
+		fmt.Println("Person:" , input)
 
-func (cat *Cat) Eat() {
-	fmt.Println("Cat is Eating")
 }
-
-func (cat *Cat) Sleep(){
-	fmt.Println("Cat is sleeping")
 }
-
-func (cat *Cat) Walk() {
-	fmt.Println("Cat is walking")
-}
-
-func (employee *Employee) Speak() {
-	fmt.Println("Employee is speaking")
-}
-
-func (employee *Employee) Think() {
-	fmt.Println("Employee is thinking")
-}
-
-func (employee *Employee) Eat() {
-	fmt.Println("Employee is eating")
-}
-
-func (employee *Employee) Sleep() {
-	fmt.Println("Employee is sleeping")
-}
-
-func (employee *Employee) Walk() {
-	fmt.Println("Employee is walking")
-}
-
