@@ -5,6 +5,7 @@ import (
 	jalaali "github.com/jalaali/go-jalaali" // حال ماژولی که گت کرده بودیم را به عنوان دیپندنسی های پروژه خود اضافه م یکنم
 	"github.com/naeemaei/moduleExampl/services"
 	// یک اسم هم برای ماژولی که گت کردیم می گذاریم
+
 )
 
 func main() {
@@ -20,5 +21,9 @@ func main() {
 	var services services.TestService = services.TestService{}  // ادرس پکیج داخلی را بهش دادیم
 	
 	fmt.Printf("%v" , services)
+
+
+
+
 
 }
