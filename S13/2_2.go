@@ -13,7 +13,7 @@ func main() {
 
 	output1 , err1 := createErrorMethod1(1)
 	if err1 != nil {
-		fmt.Println(err)
+		fmt.Println(err1)
 		return
 	}
 	fmt.Println(output1)

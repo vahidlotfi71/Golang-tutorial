@@ -1,0 +1,6 @@
+{"level":"info","AppName":"MyApp","Category: ":"Search","time":"2024-11-08T20:39:52+03:30","message":"search for a thing"}
+{"level":"error","AppName":"MyApp","error":"this is an error","time":"2024-11-08T20:39:52+03:30","message":"Error occurred"}
+{"level":"error","AppName":"MyApp","error":"this is an error in func1","time":"2024-11-08T20:39:52+03:30","message":"Error occurred func3 "}
+{"level":"info","AppName":"MyApp","Category: ":"Search","time":"2024-11-08T20:40:22+03:30","message":"search for a thing"}
+{"level":"error","AppName":"MyApp","error":"this is an error","time":"2024-11-08T20:40:22+03:30","message":"Error occurred"}
+{"level":"error","AppName":"MyApp","error":"this is an error in func1","time":"2024-11-08T20:40:22+03:30","message":"Error occurred func3 "}

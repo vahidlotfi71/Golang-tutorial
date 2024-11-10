@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	GetEmployeeInfo("ali", "samadi",4567899)
+	GetEmployeeInfo("ali", "samadi", 4567899)
 
 	fmt.Println("End of main function")
 
@@ -33,7 +33,7 @@ func GetEmployeeInfo(firstName, lastName string, salary int) float64 {
 	if salary <= 0 {
 		panic("salary is less than 0")
 	}
-	fmt.Println("salary" , salary)
+	fmt.Println("salary", salary)
 
 	return calculateTax(salary)
 }
@@ -43,6 +43,6 @@ func calculateTax(salary int) float64 {
 	if tax > 1000 {
 		panic("Tax is greater than 1000")
 	}
-	fmt.Println("tax: " , tax)
+	fmt.Println("tax: ", tax)
 	return tax
 }

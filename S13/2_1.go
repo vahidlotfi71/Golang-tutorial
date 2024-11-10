@@ -11,7 +11,7 @@ func main() {
 	//response, err := http.Get("http://google.com")
 	response, err := http.Get("http://dummyjson1234.com/products/categories")
 
-
+	
 	if err != nil {
 		println("an error occurred on get request.")
 		return // برای این ری ترن را می نویسیم که بعد این برنامه ادامه پیدا نکند 
