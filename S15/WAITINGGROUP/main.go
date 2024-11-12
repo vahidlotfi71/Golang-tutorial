@@ -13,8 +13,8 @@ var todoList = []string{}
 func main() {
 	wg := sync.WaitGroup{} 
 
-	wg.Add(10) // تعداد عملیات هامون را اینجا می گوییم
-	for i := 0 ; i< 10 ; i++ {
+	wg.Add(5) // تعداد عملیات هامون را اینجا می گوییم
+	for i := 0 ; i< 6 ; i++ {
 		go GetTodo(i , &wg)
 	}
 
