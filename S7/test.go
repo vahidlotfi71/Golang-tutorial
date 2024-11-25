@@ -2,24 +2,18 @@ package main
 
 import "fmt"
 
-type Person struct {
+type Person1 struct {
 	Name   string
-	fmaily string
-	age    int
+	family string
+	Age    int
 }
 
 func main() {
 
-	person :=make(map[string]Person)
+	persons := make(map[int]Person1)
+	persons[1] = Person1{Name: "vahid", family: "lotfi", Age: 32}
+	persons[2] = Person1{Name: "vahid", family: "lotfi", Age: 32}
 
-	person["121223231"] = Person{Name: "alice", age: 20, fmaily: "lotfield"}
-	person["23456"] = Person{Name: "vahid", age: 20, fmaily: "lotfi"}
-
-
-	fmt.Println(person)
-
-	va := person["23456"]
-
-	fmt.Print(va)
+	fmt.Printf("persons list :%v ",persons)
 
 }

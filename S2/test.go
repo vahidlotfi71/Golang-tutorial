@@ -1,5 +1,10 @@
 package main 
 
 func main(){
-	print("Hello world!")
+	PPrint("vahid")
+}
+
+
+func PPrint(name  string){
+	print("hello ",name)
 }

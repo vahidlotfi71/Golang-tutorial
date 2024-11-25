@@ -2,33 +2,20 @@ package main
 
 import "fmt"
 
-func main() {
-
-	order1, tax1 := calculateRoomPrice("standard", 2, 3)
-	order2, tax2 := calculateRoomPrice("suit" , 3 , 3)
-
-	fmt.Printf("price1: %v\ntax1 : %.2f\n", order1 , tax1)
-	fmt.Printf("price2: %v\ntax2 : %.2f\n", order2 , tax2)
-
-
+type Room1 struct {
+	ID       int    `json:"id"`
+	Type     string `json:"type"`
+	Status   bool   `json:"status"`
+	BedCount int    `json:"bedCount"`
+	Price    int    `json:"price"`
 }
 
-func calculateRoomPrice(roomType string, night int, personnumber int) (int, float64) {
-	var price int
-	var tax float64
+func main() {
 
-	switch roomType {
-	case "standard":
-		price = night * personnumber * 2000000
+	rooms := []Room1{}
+	rooms = append(rooms, Room1{ID: 12 , Type: "standard", Status:false , BedCount: 2 , Price:20000000})
 
-	case "dubble":
-		price = night * personnumber * 4000000
 
-	case "suit":
-		price = night * personnumber * 6000000
+	fmt.Printf("%v\n", rooms.P)
 
-	}
-	tax = float64(price) * 0.09
-
-	return price, tax
 }

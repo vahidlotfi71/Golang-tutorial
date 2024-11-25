@@ -1,13 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
 
 
 func main() {
+	global1 := 2000
 
-	fmt.Println(strings.Trim("     a      vahid     lotfi     hhh!!" , "!"))
+	{
+		println(global1)
+	}
+
+	print(global1)
+
 }

@@ -15,7 +15,7 @@ func main() {
 			print("Name found. index: ",i)
 			break
 		}
-	}
+	}	
 	println("Name not found")
 
 	searchKey2 = "ali"

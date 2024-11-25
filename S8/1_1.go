@@ -20,7 +20,7 @@ func CalculateRoomPrice(roomType string, nights int, personCount int) (int, floa
 		price = nights * personCount * 140000
 
 	case "dubble":
-		price = nights * personCount * 220000
+			price = nights * personCount * 220000
 
 	case "suite":
 		price = nights * personCount * 35000

@@ -1,27 +1,32 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-type Person1 struct {
-	int
-	string
-	float64
+)
+
+type Animal struct {
+	spatiouse string
+	height    float64
+	weight    float64
 }
 
 func main() {
 
-	person1 := struct {
-		NationaCode int
-		Name        string
-		Age         int
+	human := struct{
+		Name string
+		Age int
+		height float64
+		weight float64
 	}{
-		NationaCode: 2960220481,
-		Name:        "vahid",
-		Age:         32,
+		Name: "vahid",
+		Age: 31,
+		height: 173,
+		weight: 70,
+
 	}
+	animal := Animal{spatiouse: "reptails" , height: 220 , weight: 323}
 
-	person2 := Person1{121212121, "vahid", 20.11}
-
-	fmt.Println(person1)
-	fmt.Println(person2)
+	fmt.Printf("%+v\n", human)
+	fmt.Printf("%+v\n", animal)
 }

@@ -40,7 +40,7 @@ func main() {
 	fmt.Println(person_2)
 	fmt.Println(person_3)
 	fmt.Println(person_4)
-	fmt.Println(person_5
+	fmt.Println(person_5)
 
 
 
