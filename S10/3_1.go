@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type Runner interface { // رفتار دویدن دار بهتر است اسمش را رانر بگذاریم و در دلش متد ران را داشته باشم
+type Run interface { // رفتار دویدن دار بهتر است اسمش را رانر بگذاریم و در دلش متد ران را داشته باشم
 	Run()
 }
 
@@ -26,26 +26,26 @@ type Player struct {
 func main() {
 
 	player1 := &Player{
-		Name : "John",
-		Age   : 13,
-		Height : 200 ,
-		Weight : 100,
-		Position : "Forward",
+		Name:     "John",
+		Age:      13,
+		Height:   200,
+		Weight:   100,
+		Position: "Forward",
 	}
 
-	var runner Runner = player1
+	var Run Run = player1
 	//var waker Waker = player1  // برای این متغییر خطا می دهد چون متد این واکر را پایین پیاده سازی نکردیم
-	var shooter Shooter = player1	
+	var shooter Shooter = player1
 
-	runner.Run()
+	Run.Run()
 	shooter.shoot()
 
 }
 
-func (player *Player) Run() {  // اگر از ستاره استفاده کنیم ایمپایمنت نمی کند
-	fmt.Printf("name: %s , position : %s , Player is running\n\n" , player.Name , player.Position)
+func (player *Player) Run() { // اگر از ستاره استفاده کنیم ایمپایمنت نمی کند
+	fmt.Printf("name: %s , position : %s , Player is running\n\n", player.Name, player.Position)
 }
 
 func (player *Player) shoot() {
-	fmt.Printf("name: %s , position : %s , Player is shooting\n\n" , player.Name , player.Position)
+	fmt.Printf("name: %s , position : %s , Player is shooting\n\n", player.Name, player.Position)
 }
