@@ -1,22 +1,40 @@
-package main
+package main 
 
-import "fmt"
-
-type Number22 interface {
-	int | float64
+type Number1 interface{
+	int | float32 | float64
 }
 
-func main() {
-	mySlic1 := []int{1, 2, 3, 4, 5, 6, 7, 8}
-	mySlic2 := []float64{1.1, 2.2, 3.3, 4.4, 5.5, 6.6}
+func main(){
+	slic1 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
-	println(SumSlic(mySlic1))
-	fmt.Println(SumSlic(mySlic2))
+	x := Sum2(slic1)
+	y := Sum1(slic1)
+	z := Sum3(slic1)
+
+	println(x)
+	println(y)
+	println(z)
 
 }
 
-func SumSlic[T Number22](slices []T) (sum T) {
-	for _, v := range slices {
+
+func Sum1(slic []int) (sum int){
+	for _ ,v :=range slic {
+		sum += v
+	}
+	return
+}
+
+func Sum2[T int | float64](cls []T)(sum T){
+	for _ , v :=range cls{
+		sum += v
+
+	}
+	return
+}
+
+func Sum3[T Number1](slice []T) (sum T){
+	for _ , v :=  range slice{
 		sum += v
 	}
 	return

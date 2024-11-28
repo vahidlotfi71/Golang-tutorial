@@ -24,5 +24,5 @@ func main() {
 		println("an error occurred on reding the response body")
 	}
 	println(string(responseBady))
-	
+		
 }
