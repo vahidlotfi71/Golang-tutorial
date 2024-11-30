@@ -1,0 +1,15 @@
+2024/11/29 15:47:40 start main
+2024/11/29 15:47:40 start sum a , b
+2024/11/29 15:47:40 end sum a, b
+2024/11/29 15:47:56 start main
+2024/11/29 15:47:56 start sum a , b
+2024/11/29 15:47:56 end sum a, b
+2024/11/29 15:50:27 test.go:21: start main
+2024/11/29 15:50:27 test.go:27: start sum a , b
+2024/11/29 15:50:27 test.go:29: end sum a, b
+2024/11/29 12:20:55 test.go:21: start main
+2024/11/29 12:20:55 test.go:27: start sum a , b
+2024/11/29 12:20:55 test.go:29: end sum a, b
+2024/11/29 12:21:07 test.go:21: start main
+2024/11/29 12:21:07 test.go:27: start sum a , b
+2024/11/29 12:21:07 test.go:29: end sum a, b

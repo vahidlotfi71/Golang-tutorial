@@ -10,3 +10,6 @@
 Info: 2024/11/08 14:04:35 1_1.go:36: Start of main
 Warning: : 2024/11/08 14:04:35 1_1.go:41: Start of Sum
 Warning: : 2024/11/08 14:04:35 1_1.go:43: End of Sum
+Info: 2024/11/29 16:00:38 1_2.go:36: Start of main
+Warning: : 2024/11/29 16:00:38 1_2.go:41: Start of Sum
+Warning: : 2024/11/29 16:00:38 1_2.go:43: End of Sum

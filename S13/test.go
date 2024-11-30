@@ -1,37 +1,42 @@
 package main
 
 import (
+
 	"fmt"
 	"io"
+	"os"
 )
 
-type HttpError1 struct {
-	statusCode int
-	Message    string
-}
-
 func main() {
-
-}
-
-func (error HttpError1) Error11() string {
-	return fmt.Sprintf("HTTP error occurred: %d , %s", error.statusCode, error.Message)
-}
-
-func NewHttpError1(StatusCode int , message string) *HttpError1 {
-	return &HttpError1{statusCode: StatusCode , Message: message}
-}
-
-
-func GetRequest1(url string) (string, error) {
-	if len(url) == 0{
-		return "", NewHttpError1(400 , "URL is empty")	
-	}
-	response , error := GetRequest(url)
-
+	error := Copy("str.txt" , "des.txt")
+	
 	if error != nil {
-		return "" , NewHttpError1(500 , "Error getting request")
+		println("Error copying str.txt file to file: ", error)
+	}
+}
+
+func Copy(source, destination string) error {
+	sou, err := os.Open(source)
+	if err != nil {
+		return fmt.Errorf("an error occurred while opening %s: %v", source, err)
 	}
 
-	responseBody, err := io.ReadAll(response.Body)
+	des , err := os.Create(destination)
+
+	if err != nil {
+		return fmt.Errorf("an error occurred while creating %s: %v", destination, err)
+	}
+
+	_ , err = io.Copy(des, sou)
+
+	if err != nil {
+		return fmt.Errorf("an error occurred while copying %s: %v", destination, err)
+	}
+	
+	defer des.Close()
+	defer sou.Close()
+	
+
+	return nil 
+
 }

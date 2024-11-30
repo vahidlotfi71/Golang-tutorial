@@ -21,7 +21,7 @@ func CopyFile(sourceName, destinationName string) error {
 		return fmt.Errorf("during copy file could not open source file: %w", err)
 	}
 
-	/*defer*/ source.Close()
+	// /*defer*/ source.Close()
 
 	destination, err := os.Create(destinationName)
 
