@@ -2,46 +2,39 @@ package main
 
 import (
 	"fmt"
-	"io"
-	"net/http"
-	"strconv"
 	"sync"
 )
 
-var todoList = []string{}
+// ساختار Singleton
+type Singleton struct {
+	Value int
+}
+
+var (
+	instance *Singleton
+	once     sync.Once
+)
+
+// تابعی برای گرفتن نمونه Singleton
+func GetInstance() *Singleton {
+	once.Do(func() {
+		instance = &Singleton{Value: 42}
+	})
+	return instance
+}
 
 func main() {
+	// گرفتن نمونه Singleton
+	s1 := GetInstance()
+	fmt.Println("Instance 1 Value:", s1.Value)
 
-	wg := sync.WaitGroup{}
+	// تغییر مقدار در نمونه Singleton
+	s1.Value = 100
 
-	wg.Add(5)	
-	for i:= 0 ; i< 5; i++ {
-		go GetTodo(i, &wg)
-	}
-	wg.Wait()
+	// گرفتن نمونه Singleton مجدد
+	s2 := GetInstance()
+	fmt.Println("Instance 2 Value:", s2.Value)
 
-	fmt.Printf("%+v", todoList)
-
-}
-
-func GetTodo(id int , wg *sync.WaitGroup) {
-	GetUrl("https://jsonplaceholder.typicode.com/todos/"+ strconv.Itoa(id) , wg)
-}
-
-func GetUrl(url string , wg *sync.WaitGroup) {
-	defer wg.Done()
-	respons , err := http.Get(url)
-
-	if err != nil {
-		panic(err)
-	}
-
-	responseBody ,err := io.ReadAll(respons.Body)
-	defer respons.Body.Close()
-
-	if err != nil {
-		panic(err)
-	}
-
-	todoList = append(todoList, string(responseBody))
+	// بررسی یکسان بودن نمونه‌ها
+	fmt.Printf("Are s1 and s2 the same? %v\n", s1 == s2)
 }
