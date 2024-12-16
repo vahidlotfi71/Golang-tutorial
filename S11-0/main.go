@@ -11,7 +11,7 @@ import (
 
 func main() {
 	fmt.Println("Hello world!!!")
-	year , month ,day , error :=  jalaali.ToGregorian(1371 , 5 ,35 )
+	year , month ,day , error :=  jalaali.ToGregorian(1371 , 5 ,30 )
 
 	if error == nil {
 		fmt.Printf("%d/%d/%d\n" , year , month , day)

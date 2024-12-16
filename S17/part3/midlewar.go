@@ -13,7 +13,7 @@ func loggingMiddleware(next http.Handler) http.Handler {
 	})
 }
 
-func homeHandler(w http.ResponseWriter, r *http.Request) {
+func homeHandler(w http.ResponseWriter, r *http.Reque		st) {
 	fmt.Fprintf(w, "این صفحه اصلی است.")
 }
 
